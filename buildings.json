@@ -1,0 +1,112 @@
+[
+  {
+    "_id": "FG7pRodZNF",
+    "createdAt": "2017-04-04T10:45:23.103Z",
+    "updatedAt": "2017-04-04T11:17:23.210Z",
+    "name": "Главный корпус",
+    "readACL": [],
+    "removeACL": [],
+    "updateACL": [],
+    "rooms": [
+      {
+        "children": [
+          {
+            "id": "b1floor1room1",
+            "name": "101"
+          },
+          {
+            "name": "102",
+            "id": "b1floor1room2"
+          },
+          {
+            "id": "b1floor1room3",
+            "name": "103"
+          },
+          {
+            "id": "b1floor1room4",
+            "name": "104"
+          },
+          {
+            "id": "b1floor1room5",
+            "name": "Вахта"
+          }
+        ],
+        "id": "b1floor1",
+        "name": "Этаж 1"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "id": "b1floor2leftroom1",
+                "name": "Приемная директора по общественным связям в федеральном регионе"
+              },
+              {
+                "id": "b1floor2leftroom2",
+                "name": "102"
+              },
+              {
+                "id": "b1floor2leftroom3",
+                "name": "103"
+              }
+            ],
+            "id": "b1floor2left",
+            "name": "Левое крыло"
+          },
+          {
+            "children": [
+              {
+                "id": "b1floor2rightroom1",
+                "name": "101"
+              },
+              {
+                "id": "b1floor2rightroom2",
+                "name": "102"
+              },
+              {
+                "id": "b1floor2rightroom3",
+                "name": "103"
+              }
+            ],
+            "id": "b1floor2right",
+            "name": "Правое крыло"
+          },
+          {
+            "name": "Подсобное помещение",
+            "id": "b1floor2roomx"
+          }
+        ],
+        "id": "b1floor2",
+        "name": "Этаж 2"
+      }
+    ]
+  },
+  {
+    "_id": "CacR5AWhfr",
+    "removeACL": [],
+    "updateACL": [],
+    "createdAt": "2017-04-04T11:14:40.421Z",
+    "updatedAt": "2017-04-04T11:16:49.725Z",
+    "name": "Офис на улице Линии Октябрьской железной дороги",
+    "readACL": [],
+    "rooms": [
+      {
+        "name": "Главное помещение офиса",
+        "id": "b2room1"
+      },
+      {
+        "id": "b2room2",
+        "name": "Подсобное помещение"
+      },
+      {
+        "id": "b2room3",
+        "name": "Кабинет управляющего"
+      },
+      {
+        "id": "b2room4",
+        "name": "Складское помещение"
+      }
+    ]
+  }
+]

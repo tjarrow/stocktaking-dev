@@ -1,0 +1,44 @@
+.start-page, .auth-form {
+  width: 40%;
+  margin: 0 auto;
+  min-height: 250px;
+  background: #464B5E;
+  font-family: 'Roboto Slab', serif;
+}
+
+.start-header {
+  text-align: center;
+  color: #fff;
+  margin: 10px;
+  font-size: 22px;
+}
+
+.start-btn-wrapper {
+  margin-top: 100px;
+  display: flex;
+}
+
+.auth-btn-wrapper {
+  margin-top: 100px;
+  display: flex;
+  flex-flow: column;
+}
+
+.auth-input {
+  width: 350px;
+  font-size: 16px;
+  border-radius: 4px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.login-button, .signup-button {
+  width: 225px;
+  margin: 0 auto;
+  font-size: 16px;
+  border-radius: 3px;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  background: #999999;
+}

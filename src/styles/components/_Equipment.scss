@@ -1,0 +1,67 @@
+* {
+  font-family: 'Roboto Slab', serif;
+}
+
+.add-item {
+  font-size: 16px;
+  border: 1px solid #c0c0c0;
+  border-radius: 5px;
+  margin-top: 15px;
+  padding: 10px;
+  width: 75%;
+  display: flex;
+  flex-flow: column;
+}
+
+.add-item input, button {
+  border-radius: 5px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.add-item input {
+  float: right;
+  border: none;
+  padding: 3px;
+
+}
+
+.add-item label {
+  margin-bottom: 5px;
+}
+
+.add-item button {
+  padding: 5px;
+  margin-top: 5px;
+  border: none;
+}
+
+.equipment-item {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.equipment-item__header {
+  font-size: 20px;
+  text-align: center;
+  border: none;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.equipment-item span {
+  border: none;
+  font-size: 16px;
+  margin-left: 0;
+}
+
+.btn-wrap button {
+  margin-right: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 3px;
+  border: none;
+}

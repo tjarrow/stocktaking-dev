@@ -1,0 +1,79 @@
+[
+  {
+    "_id": "FJhSfbjzEB",
+    "name": "Слон",
+    "room": "102",
+    "updateACL": [],
+    "readACL": [],
+    "removeACL": [],
+    "count": 1,
+    "createdAt": "2019-12-17T18:53:57.280Z",
+    "updatedAt": "2019-12-17T18:53:57.280Z"
+  },
+  {
+    "_id": "Xgrgq9BPXg",
+    "count": 1,
+    "removeACL": [],
+    "updatedAt": "2019-12-21T15:59:28.929Z",
+    "readACL": [],
+    "updateACL": [],
+    "name": "Жираф",
+    "room": "103",
+    "createdAt": "2019-12-17T19:25:06.252Z"
+  },
+  {
+    "_id": "NLSaVdNLrr",
+    "updatedAt": "2019-12-21T15:59:25.513Z",
+    "updateACL": [],
+    "name": "Котик",
+    "room": "Вахта",
+    "readACL": [],
+    "removeACL": [],
+    "count": 3,
+    "createdAt": "2019-12-17T19:31:58.589Z"
+  },
+  {
+    "_id": "4ZKwlS9xGW",
+    "updatedAt": "2019-12-18T14:47:39.924Z",
+    "removeACL": [],
+    "count": 2,
+    "room": "102",
+    "createdAt": "2019-12-18T14:47:39.924Z",
+    "readACL": [],
+    "updateACL": [],
+    "name": "Системный блок"
+  },
+  {
+    "_id": "t59kCsQbMt",
+    "room": "102",
+    "createdAt": "2019-12-21T14:47:48.804Z",
+    "readACL": [],
+    "updateACL": [],
+    "removeACL": [],
+    "name": "Стул",
+    "updatedAt": "2019-12-21T15:59:31.316Z",
+    "count": 1
+  },
+  {
+    "_id": "IncNPEJSaS",
+    "name": "Телефон",
+    "updatedAt": "2019-12-21T19:27:04.535Z",
+    "removeACL": [],
+    "room": "101",
+    "count": 2,
+    "createdAt": "2019-12-21T19:27:04.535Z",
+    "readACL": [],
+    "updateACL": []
+  },
+  {
+    "_id": "aglFxZVIra",
+    "room": "Складское помещение",
+    "name": "Стремянка",
+    "createdAt": "2019-12-23T19:02:04.412Z",
+    "updatedAt": "2019-12-23T19:02:04.412Z",
+    "readACL": [],
+    "updateACL": [],
+    "removeACL": [],
+    "count": 4
+  }
+]

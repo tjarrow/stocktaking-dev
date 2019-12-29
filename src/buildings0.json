@@ -1,0 +1,162 @@
+[
+  {
+    "_id": "FG7pRodZNF",
+    "createdAt": "2017-04-04T10:45:23.103Z",
+    "updatedAt": "2017-04-04T11:17:23.210Z",
+    "name": "Главный корпус",
+    "readACL": [],
+    "removeACL": [],
+    "updateACL": [],
+    "rooms": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "id": "b1floor1leftroom1",
+                "name": "Приемная директора"
+              },
+              {
+                "id": "b1floor1leftroom2",
+                "name": "102"
+              },
+              {
+                "id": "b1floor1leftroom3",
+                "name": "103"
+              }
+            ],
+            "id": "b1floor1left",
+            "name": "Левое крыло"
+          },
+          {
+            "children": [
+              {
+                "id": "b1floor1rightroom1",
+                "name": "104"
+              },
+              {
+                "id": "b1floor1rightroom2",
+                "name": "105"
+              },
+              {
+                "id": "b1floor1rightroom3",
+                "name": "106"
+              }
+            ],
+            "id": "b1floor1right",
+            "name": "Правое крыло"
+          },
+          {
+            "name": "Подсобное помещение",
+            "id": "b1floor1roomx"
+          }
+        ],
+        "id": "b1floor1",
+        "name": "Этаж 1"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "id": "b1floor2leftroom1",
+                "name": "Приемная замдиректора"
+              },
+              {
+                "id": "b1floor2leftroom2",
+                "name": "207"
+              },
+              {
+                "id": "b1floor2leftroom3",
+                "name": "208"
+              }
+            ],
+            "id": "b1floor2left",
+            "name": "Левое крыло"
+          },
+          {
+            "children": [
+              {
+                "id": "b1floor2rightroom1",
+                "name": "209"
+              },
+              {
+                "id": "b1floor2rightroom2",
+                "name": "210"
+              },
+              {
+                "id": "b1floor2rightroom3",
+                "name": "211"
+              }
+            ],
+            "id": "b1floor2right",
+            "name": "Правое крыло"
+          },
+          {
+            "name": "Подсобное помещение",
+            "id": "b1floor2roomx"
+          }
+        ],
+        "id": "b1floor2",
+        "name": "Этаж 2"
+      }
+    ]
+  },
+  {
+    "_id": "F32hwqdZNF",
+    "createdAt": "2017-04-04T10:45:23.103Z",
+    "updatedAt": "2017-04-04T11:17:23.210Z",
+    "name": "Корпус №2",
+    "readACL": [],
+    "removeACL": [],
+    "updateACL": [],
+    "rooms": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "id": "b2floor1leftroom1",
+                "name": "Приемная директора"
+              },
+              {
+                "id": "b1floor1leftroom2",
+                "name": "342"
+              },
+              {
+                "id": "b2floor1leftroom3",
+                "name": "343"
+              }
+            ],
+            "id": "b2floor1left",
+            "name": "Левое крыло"
+          },
+          {
+            "children": [
+              {
+                "id": "b2floor1rightroom1",
+                "name": "344"
+              },
+              {
+                "id": "b2floor1rightroom2",
+                "name": "345"
+              },
+              {
+                "id": "b2floor1rightroom3",
+                "name": "346"
+              },
+              {
+                "name": "Подсобное помещение",
+                "id": "b2floor1rightroomx"
+              }
+            ],
+            "id": "b2floor1right",
+            "name": "Правое крыло"
+          }
+        ],
+        "id": "b2floor1",
+        "name": "Этаж 1"
+      }
+    ]
+  }
+]
