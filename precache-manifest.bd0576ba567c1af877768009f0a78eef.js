@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e417c66ffbf8f3238a26b33984ceb9df",
+    "revision": "eb2cce6476d7f3472e5d4de89b5fb93c",
     "url": "/stocktaking-dev/index.html"
   },
   {
-    "revision": "6ef0925dc0c765268047",
+    "revision": "2b99b5aeecb821e67d7f",
     "url": "/stocktaking-dev/static/css/main.0bb190c4.chunk.css"
   },
   {
-    "revision": "8e3dc8e6f329645329c5",
-    "url": "/stocktaking-dev/static/js/2.9de50513.chunk.js"
+    "revision": "fa3bc33ac5adf412db62",
+    "url": "/stocktaking-dev/static/js/2.624227ca.chunk.js"
   },
   {
-    "revision": "e928fe768baa9832b5bc57eae021f30c",
-    "url": "/stocktaking-dev/static/js/2.9de50513.chunk.js.LICENSE"
+    "revision": "78ddf5a465591a03b9601ba2ddd63415",
+    "url": "/stocktaking-dev/static/js/2.624227ca.chunk.js.LICENSE"
   },
   {
-    "revision": "6ef0925dc0c765268047",
-    "url": "/stocktaking-dev/static/js/main.71d55e0e.chunk.js"
+    "revision": "2b99b5aeecb821e67d7f",
+    "url": "/stocktaking-dev/static/js/main.379a12f7.chunk.js"
   },
   {
     "revision": "e9de761d78b84a4a3fb2",
