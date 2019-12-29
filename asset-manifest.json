@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/stocktaking-dev/static/css/main.0bb190c4.chunk.css",
-    "main.js": "/stocktaking-dev/static/js/main.379a12f7.chunk.js",
-    "main.js.map": "/stocktaking-dev/static/js/main.379a12f7.chunk.js.map",
+    "main.js": "/stocktaking-dev/static/js/main.b49eec94.chunk.js",
+    "main.js.map": "/stocktaking-dev/static/js/main.b49eec94.chunk.js.map",
     "runtime-main.js": "/stocktaking-dev/static/js/runtime-main.a6284acb.js",
     "runtime-main.js.map": "/stocktaking-dev/static/js/runtime-main.a6284acb.js.map",
-    "static/js/2.624227ca.chunk.js": "/stocktaking-dev/static/js/2.624227ca.chunk.js",
-    "static/js/2.624227ca.chunk.js.map": "/stocktaking-dev/static/js/2.624227ca.chunk.js.map",
+    "static/js/2.43ed302b.chunk.js": "/stocktaking-dev/static/js/2.43ed302b.chunk.js",
+    "static/js/2.43ed302b.chunk.js.map": "/stocktaking-dev/static/js/2.43ed302b.chunk.js.map",
     "index.html": "/stocktaking-dev/index.html",
-    "precache-manifest.bd0576ba567c1af877768009f0a78eef.js": "/stocktaking-dev/precache-manifest.bd0576ba567c1af877768009f0a78eef.js",
+    "precache-manifest.c5849f5e75eb8ec891fcaa194960861b.js": "/stocktaking-dev/precache-manifest.c5849f5e75eb8ec891fcaa194960861b.js",
     "service-worker.js": "/stocktaking-dev/service-worker.js",
     "static/css/main.0bb190c4.chunk.css.map": "/stocktaking-dev/static/css/main.0bb190c4.chunk.css.map",
-    "static/js/2.624227ca.chunk.js.LICENSE": "/stocktaking-dev/static/js/2.624227ca.chunk.js.LICENSE",
+    "static/js/2.43ed302b.chunk.js.LICENSE": "/stocktaking-dev/static/js/2.43ed302b.chunk.js.LICENSE",
     "static/media/logo.svg": "/stocktaking-dev/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.a6284acb.js",
-    "static/js/2.624227ca.chunk.js",
+    "static/js/2.43ed302b.chunk.js",
     "static/css/main.0bb190c4.chunk.css",
-    "static/js/main.379a12f7.chunk.js"
+    "static/js/main.b49eec94.chunk.js"
   ]
 }

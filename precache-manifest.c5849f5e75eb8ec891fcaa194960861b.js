@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "eb2cce6476d7f3472e5d4de89b5fb93c",
+    "revision": "07da9aa0492a561414b4bed31fb13f11",
     "url": "/stocktaking-dev/index.html"
   },
   {
-    "revision": "2b99b5aeecb821e67d7f",
+    "revision": "6a89adba0d11e7168563",
     "url": "/stocktaking-dev/static/css/main.0bb190c4.chunk.css"
   },
   {
-    "revision": "fa3bc33ac5adf412db62",
-    "url": "/stocktaking-dev/static/js/2.624227ca.chunk.js"
+    "revision": "6838a07c511e5a4395de",
+    "url": "/stocktaking-dev/static/js/2.43ed302b.chunk.js"
   },
   {
     "revision": "78ddf5a465591a03b9601ba2ddd63415",
-    "url": "/stocktaking-dev/static/js/2.624227ca.chunk.js.LICENSE"
+    "url": "/stocktaking-dev/static/js/2.43ed302b.chunk.js.LICENSE"
   },
   {
-    "revision": "2b99b5aeecb821e67d7f",
-    "url": "/stocktaking-dev/static/js/main.379a12f7.chunk.js"
+    "revision": "6a89adba0d11e7168563",
+    "url": "/stocktaking-dev/static/js/main.b49eec94.chunk.js"
   },
   {
     "revision": "e9de761d78b84a4a3fb2",
