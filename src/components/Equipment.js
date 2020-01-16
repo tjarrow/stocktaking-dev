@@ -1,5 +1,6 @@
-import React from 'react';
-import equipment from "../equipment.json";
+import React, { Component } from 'react';
+import {InputErrors} from './InputErrors.js';
+// import equipment from "../equipment.json";
 import nextId from "react-id-generator";
 
 class Equipment extends React.Component {
@@ -14,22 +15,51 @@ class Equipment extends React.Component {
       editByName:'',
       itemName: '',
       itemId: '',
+      itemRoom:'',
       itemCount: 1,
-      editById:''
+      editById:'',
+      // inputErrors: {itemName: '', itemId: ''},
+      itemNameValid: false,
+      itemIdValid: false
     };
     this.handleDeleteItem = this.handleDeleteItem.bind(this);
     this.handleAddItem = this.handleAddItem.bind(this);
     this.handleEditItem = this.handleEditItem.bind(this);
+    this.handleTransferItem = this.handleTransferItem.bind(this);
   }
 
-    handleChangeItem = (e) => {
+    handleChangeInput = (e) => {
       const target = e.target;
       const value = target.value;
       const name = target.name;
       this.setState ({
         [name] : value
-      });
+      }
+      //,
+      //() => { this.validateField(name, value) }
+    );
     }
+
+    validateField(fieldName, value) {
+      let fieldValidationErrors = this.state.inputErrors;
+      let itemNameValid = this.state.itemNameValid;
+      // let itemIdValid = this.state.itemIdValid;
+    if (fieldName === 'itemName')
+    {
+      itemNameValid = value.length >= 6;
+      fieldValidationErrors.itemName = itemNameValid ? '' : ' is invalid';
+    }
+
+      this.setState({inputErrors: fieldValidationErrors,
+                    itemNameValid: itemNameValid,
+                    // itemIdValid: itemIdValid
+                  }, this.validateFormName);
+      }
+
+      validateFormName() {
+          this.setState({itemNameValid: this.state.itemNameValid });
+          console.log(this.state.inputErrors);
+      }
 
     handleAddItem = (e) => {
       e.preventDefault();
@@ -39,17 +69,19 @@ class Equipment extends React.Component {
           "count": Number.parseInt(this.state.itemCount),
           "_id": nextId()
         };
-        this.setState({equipments: this.state.equipments.concat(comp)});
+        this.setState({equipments: this.state.equipments.concat(comp)},
+        () => localStorage.setItem('equipments', JSON.stringify(this.state.equipments))
+      );
         console.info("Item added");
-          this.render();
+
+        this.state.itemName = '';
+        this.state.itemCount = 1;
     }
 
     handleEditItem = (e) => {
       e.preventDefault();
       var index = e.target.className;
       console.log(index);
-      // const item = this.state.equipments.filter(el => el._id == index);
-      // console.log(item);
       for (var i = 0; i < this.state.equipments.length; i++) {
            if(this.state.equipments[i]._id === index) {
              this.state.equipments[i]._id = this.state.itemId;
@@ -58,15 +90,51 @@ class Equipment extends React.Component {
              console.info("Item edited");
             }
         }
-        this.setState({equipments: this.state.equipments });
+        this.setState({
+          equipments: this.state.equipments,
+          itemId: '',
+          itemName: '',
+          itemCount: 1,
+          showEditBtn: !this.state.showEditBtn,
+          showAddBtn: !this.state.showAddBtn,
+          showIdInput: !this.state.showIdInput,
+          showRoomInput:!this.state.showRoomInput
+        },
+        () => localStorage.setItem('equipments', JSON.stringify(this.state.equipments))
+      );
     }
 
     handleDeleteItem = (e) => {
       var index = e.target.id;
       console.log(index);
       const equipments = this.state.equipments.filter(el => el._id !== index);
-      this.setState({equipments}, console.log);
+      this.setState({equipments},
+      () => localStorage.setItem('equipments', JSON.stringify(this.state.equipments))
+      );
       console.info(this.state.equipments);
+    }
+
+    handleTransferItem = (e) => {
+      e.preventDefault();
+      var index = e.target.className;
+      for (var i = 0; i < this.state.equipments.length; i++) {
+         if(this.state.equipments[i]._id === index) {
+           this.state.equipments[i].room = this.state.itemRoom;
+       }
+      }
+      this.setState(
+        { equipments: this.state.equipments,
+          itemId: '',
+          itemName: '',
+          itemCount: 1,
+          itemRoom: '',
+          showEditBtn: !this.state.showEditBtn,
+          showAddBtn: !this.state.showAddBtn,
+          showIdInput: !this.state.showIdInput,
+          showRoomInput:!this.state.showRoomInput
+        },
+        () => localStorage.setItem('equipments', JSON.stringify(this.state.equipments))
+      );
     }
 
   findItem = (room_name) => {
@@ -85,16 +153,15 @@ class Equipment extends React.Component {
 
   handleShowEditComponents = (e) => {
     var index = e.target.className;
-    //const item = this.state.equipments.filter(el => el._id == index);
-    this.state.editById = index;
+    this.state.itemId = index;
     for (var i = 0; i < this.state.equipments.length; i++) {
          if(this.state.equipments[i]._id === index) {
-           this.state.editByName = this.state.equipments[i].name;
+           this.state.itemName = this.state.equipments[i].name;
          }
       }
   //  this.state.editByName = item.name;
-    console.info(this.state.editByName);
-    console.log(this.state.editById);
+    console.info(this.state.itemName);
+    console.log(this.state.itemId);
     this.setState({
       showEditBtn: !this.state.showEditBtn,
       showAddBtn: !this.state.showAddBtn,
@@ -105,14 +172,25 @@ class Equipment extends React.Component {
   }
 
   componentDidMount() {
-      this.setState({
-        equipments: equipment
-      });
-      console.info(equipment);
+
+    const default_equipment = [];
+
+    const equipment = localStorage.getItem('equipments');
+    const eq  =  equipment ? JSON.parse(equipment ) : default_equipment;
+        this.setState({
+          equipments: eq
+        });
+
+    console.log('Fetching data');
   }
 
   componentDidUpdate() {
+
     this.render();
+  }
+
+  componentWillUnmount() {
+    console.log('Component will unmount');
   }
 
   render() {
@@ -128,11 +206,12 @@ class Equipment extends React.Component {
             <label>
               ID оборудования:
               <input
-                value={this.state.editById}
+                value={this.state.itemId}
                 className='add-item-id__input'
                 type='text' name='itemId'
                 placeholder='ID'
-                onChange={e => this.handleChangeItem(e)} />
+                onChange={this.handleChangeInput}
+                />
             </label>
             }
             <label>
@@ -140,11 +219,11 @@ class Equipment extends React.Component {
               <input
                 className='add-item-name__input'
                 type='text' name='itemName'
-                // value={this.state.editByName}
+                value={this.state.itemName}
                 placeholder='Стол'
-                onChange={e => this.handleChangeItem(e)} />
+                onChange={e => this.handleChangeInput(e)}
+                 />
             </label>
-
             <label>
               Количество:
               <input
@@ -153,18 +232,27 @@ class Equipment extends React.Component {
                 min = '1'
                 name='itemCount'
                 value={this.state.itemCount}
-                onChange={e => this.handleChangeItem(e)} />
+                onChange={e => this.handleChangeInput(e)} />
             </label>
             {this.state.showAddBtn &&
             <button onClick={e => this.handleAddItem(e)}  className="button">Добавить оборудование</button>
             }
             {this.state.showEditBtn &&
-            <button onClick={e => this.handleEditItem(e)}  className={this.state.editById}>Редактировать оборудование</button>
+            <button onClick={e => this.handleEditItem(e)} className={this.state.itemId}>Редактировать оборудование</button>
+            }
+            {this.state.showEditBtn &&
+            <label className='add-item-room__input'>Номер комнаты:
+              <input
+                type="number"
+                name='itemRoom'
+                onChange={e => this.handleChangeInput(e)} />
+                </label>
+            }
+            {this.state.showEditBtn &&
+            <button onClick={e => this.handleTransferItem(e)} className={this.state.itemId}>Перенести в другую комнату </button>
             }
           </form>
-          <form>
 
-          </form>
         </div>
 
       </div>
