@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {InputErrors} from './InputErrors.js';
+import _buildings from "../buildings0.json";
 // import equipment from "../equipment.json";
 import nextId from "react-id-generator";
 
@@ -8,10 +9,12 @@ class Equipment extends React.Component {
     super(props);
     this.state = {
       equipments: [],
+      buildings: _buildings,
       showEditBtn: false,
       showAddBtn: true,
       showIdInput: false,
       showRoomInput: true,
+      validRoomNumber: true,
       editByName:'',
       itemName: '',
       itemId: '',
@@ -117,24 +120,60 @@ class Equipment extends React.Component {
     handleTransferItem = (e) => {
       e.preventDefault();
       var index = e.target.className;
+
+      let roomnames = [];
+
+      this.state.buildings.map(building => {
+        building.rooms.map(room => {
+          room.children.map(item => {
+            item.children.map(i => {
+              roomnames.push(i.name);
+            });
+          });
+        });
+      });
+
+      console.log(this.state.itemRoom);
+
+      let valid_room = roomnames.filter(name => name === this.state.itemRoom);
+
+      if (valid_room.length === 0) {
+          alert("Такой комнаты не существует");
+          this.state.validRoomNumber = false;
+        } else {
+          this.state.validRoomNumber = true;
+        }
+
+      if (this.props.room_name === this.state.itemRoom) {
+        alert("Вы уже находитесь в этой комнате");
+        this.state.validRoomNumber = false;
+        } else {
+          this.state.validRoomNumber = true;
+        }
+
+
+      console.log(this.state.validRoomNumber);
+
       for (var i = 0; i < this.state.equipments.length; i++) {
-         if(this.state.equipments[i]._id === index) {
+         if((this.state.equipments[i]._id === index) && (this.state.validRoomNumber)) {
            this.state.equipments[i].room = this.state.itemRoom;
        }
       }
-      this.setState(
-        { equipments: this.state.equipments,
-          itemId: '',
-          itemName: '',
-          itemCount: 1,
-          itemRoom: '',
-          showEditBtn: !this.state.showEditBtn,
-          showAddBtn: !this.state.showAddBtn,
-          showIdInput: !this.state.showIdInput,
-          showRoomInput:!this.state.showRoomInput
-        },
-        () => localStorage.setItem('equipments', JSON.stringify(this.state.equipments))
-      );
+      if (this.state.validRoomNumber) {
+        this.setState(
+          { equipments: this.state.equipments,
+            itemId: '',
+            itemName: '',
+            itemCount: 1,
+            itemRoom: '',
+            showEditBtn: !this.state.showEditBtn,
+            showAddBtn: !this.state.showAddBtn,
+            showIdInput: !this.state.showIdInput,
+            showRoomInput:!this.state.showRoomInput
+          },
+          () => localStorage.setItem('equipments', JSON.stringify(this.state.equipments))
+        );
+      }
     }
 
   findItem = (room_name) => {

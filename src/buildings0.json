@@ -45,10 +45,6 @@
             ],
             "id": "b1floor1right",
             "name": "Правое крыло"
-          },
-          {
-            "name": "Подсобное помещение",
-            "id": "b1floor1roomx"
           }
         ],
         "id": "b1floor1",
@@ -91,10 +87,6 @@
             ],
             "id": "b1floor2right",
             "name": "Правое крыло"
-          },
-          {
-            "name": "Подсобное помещение",
-            "id": "b1floor2roomx"
           }
         ],
         "id": "b1floor2",
@@ -144,10 +136,6 @@
               {
                 "id": "b2floor1rightroom3",
                 "name": "346"
-              },
-              {
-                "name": "Подсобное помещение",
-                "id": "b2floor1rightroomx"
               }
             ],
             "id": "b2floor1right",

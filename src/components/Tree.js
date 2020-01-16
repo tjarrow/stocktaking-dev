@@ -10,6 +10,10 @@ class Tree extends React.Component {
     };
   }
 
+  componentDidMount() {
+    
+  }
+
   componentWillMount() {
     // var buildings = new Scorocode.Query("buildings");
     //buildings.find().then(finded => {
